@@ -1,3 +1,5 @@
+
+<?php include 'validacao.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,6 +53,8 @@
         
             <div class="row">
               <div class="col-md-3 menu"> 
+                <h6 style="color:white">Bem vindo <?php echo $_SESSION['usuario'] ?>
+                </h6>
                 <ul class="menu">
                  <li> <a href="./Principal.html" class="menu-item"> <i class="fa-solid fa-user"></i> Usuário </a> </li>
                 <li> <a href="./Cidade.html" class="menu-item"> <i class="fa-solid fa-city"></i> Cidade </a> </li>
