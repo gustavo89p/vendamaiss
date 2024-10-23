@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela de venda</title>
+    <link rel="styleshet" href="./recursos/venda.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon"type="imagex/png"
+    href="data:image/png;base64,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">
+
+</head>
+<body>
+    
+    <div class="container" >
+        <h3>Tela de Venda</h3>
+      
+        <div class="row">
+            <div class="col-md-8"> 
+               <form action="" method="post">
+                <div class="row">
+
+                  <div class="form-grupo col-md">
+                    <label> produto </label>
+                    <select class="form-control">
+                        <option> Mouse </option>
+                        <option> teclado </option>
+                        <option> fone </option>
+
+                    </select>
+                  </div>
+
+                  <div class="form-grupo col-md">
+                    <label> Quantidade </label>
+                    <input type="number" required class="form-control">
+                  </div>
+                    <div class="col-md">
+                       <button type="submit" class="btn btn-primary" style="margin-top: 32px;">
+                         <i class="fa-solid fa-plus"></i>
+                       </button>
+                    </div>
+
+                    <table class="table mt-4 table-striped table-bordered table-sm">
+                        <thead>
+                            <th> produto </th>
+                            <th> quantidade</th>
+                            <th> valor unitario </th>
+                            <th> valor total </th>
+                            <th> opções</th>
+                        </thead>
+                   
+                    <tbody>
+
+                       <tr>
+                        
+                        <td> Mouse </td>
+                        <td> 2 </td>
+                        <td> 20 </td>
+                        <td> 40 </td>
+                        <td> <a href=""> excluir </a> </td> 
+                       </tr>
+                    </tbody>
+
+                </table>
+
+
+                </div>
+
+
+               </form> 
+            
+
+            </div>
+            <div class="col-md-4"> 
+              <h3> resumo da venda </h3>
+
+              <form action="" method="post">
+               <div class="form-group">
+                 <label> cliente </label>
+                 <select class="form-control">
+                   <option> joão </option>
+                   <option> aline </option>
+                 </select>
+               </div>
+               <div class="form-group">
+                <label> Funcionario </label>
+                <select class="form-control">
+                  <option> Juliano </option>
+                  <option> Tatiane </option>
+                </select>
+              </div>
+      
+             <div class="form-group">
+              <label> Quantidade total </label>
+              <input type="text" class="form-control" value="2">
+      
+             </div>
+      
+      
+             <div class="form-group">
+              <label> Valor total </label>
+              <input type="text" class="form-control" value="40" readonly>
+             </div>
+      
+             <div class="form-group">
+              <label> Observação </label>
+              <textarea class="form-control"></textarea>
+      
+             </div>
+      
+             <a href="" class="btn btn-success"><i class="fa-solid fa-cart-shopping"></i> Finalizar</a>
+             <a href="./principal.php"  class="btn btn-danger"> cancelar </a>
+      
+              </form>
+
+            </div>
+
+        </div>
+
+        
+
+
+
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
